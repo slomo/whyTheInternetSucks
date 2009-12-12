@@ -1,0 +1,54 @@
+Why the Internet sucks: Why the Internet Sucks: A Core Perspective
+
+Outline
+=======
+
+1. Einleitung / Hintergrund
+    a) Das Internet // Bis her wenige Quellen die hier helfen
+                    // da hier weniger spezielle Gebiete gefragt sind.
+        - Aufbau
+        - Internet-Routing
+        - Internet-Core
+        - Leaf-Netzwerke
+        - PI/ redudant links
+    b) Das Problem
+        - Beschreibung [1][6]
+        - Versuch der Quantfzierung [5][6]
+            // gute belgbare Quellen müssen noch gefunden werden
+2. Techniken 
+    a) Elemintion [1] // kurz gehalten 
+        - Grundlegende Idee 
+        - Benefits
+            * Problem wird gelöst
+        - Nachteile
+            * Deployment
+            * Node Intellegice
+    b) Seperation
+        i) Map & Encap
+            - Funktionsweise 
+            - LISP [3]
+                * DTH [2]
+                * (vielleicht andere Varianten)
+            - Benefits
+                * Problem gelöst
+                * wenig Änderungen
+                * andere Vorteile [1]
+            - Tunneling Problem 
+                * Defragmentation/MTU [3]
+        ii) Address rewriting
+            - six/one Routing [4]
+3. Berurteilung
+    a) Persönliche Meinung
+        - in Bildung in Begriffen
+    b) Konsens (= IETF) 
+        // noch keine Quellen, fraglich ob es die gibt
+        // ebenfalls fraglich, ob es *eine* Meinung gibt
+4. Quellen
+
+[1] Startpaper: Towards a new internet routing archictecture 
+[2] Laurent & Mathy Luigi Iannone - A Scalable Routing System Design for Future Internet - ACM - New York - 2008
+[3] D. Farinacci - Locator/ID Separation Protocol (LISP) - CISCO Network Working Group - September 2009
+[4] Christian Vogt - Six/One Router: A Scalable and Backwards Compatible Solution for Provider-Independent Addressing - ACM - New York - 2008
+[5] http://bgp.potaroo.net/index-bgp.html (Quelle noch sehr unsicher)
+[6] Geoff Huston - Analyzing the Internet's BGP Routing Table - Juli 2003 
+
