@@ -1,0 +1,38 @@
+%Einleitungskapitel
+\section{Intruduction}
+\paragraph{Structure of the Internet}
+Before starting my studies I tough of the Internet as a large crowd of 
+Routers, connect with each other without any specific structure, it was 
+obvious that not ever single computer in the net could have a plan or 
+some kind of map for the whole Internet, but the routers seemed to have 
+all the same understanding of the net. A transmission was done by 
+sending the data, also referred by the term package, to your nearest 
+router, described by your default route, who selected which way to take 
+through the entire net. \\
+During my first year I my view to the Internet changed from this 
+cloud perspective to a more hierarchical perspective, as i was introduced 
+in managing a Router at spline. Also this router hat a default route 
+and routes, to other routers he know, which are the default router for 
+their subnet. Thinking of the Internet as such a structured tree 
+implies that there exists one rootnode which does not go along with any 
+of terms usually used by people to describe the net, for example 
+fault tolerant or equal. \\
+The truth about the structure of the Internet is that it is as well 
+something in between that tow approaches and also something completely 
+different. 
+\paragraph{Parts of the Internet}
+\subparagraph{Autonomous Systems}
+The Internet is a net build out of nets. Each of these smaller net 
+builds an autonomous system (AS). Each of these is controlled by single 
+operator, often a company, a university or any other kind of 
+organistation. ASs can be identified via an AS-Number, normally written 
+as AS<number>.
+%% add more here 
+\subparagraph{Interior Gateway Protocol}
+If a machine inside such a autonomous system wants to reach an other 
+machine it forwards the packet to a router, assuming that the receiver 
+is not part of the same subnet. If the destination is within the same AS 
+the router uses the IGP (Interior Gateway Protocol) to discover the 
+shortest path to it. IGP is used to direct traffic, which goes from 
+one location in the AS to an other. These location can be systems in 
+the AS, as well as exit or entry points to the AS.
