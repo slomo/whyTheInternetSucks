@@ -1,2 +1,6 @@
 *.pdf
 *.div
+*.aux
+*.toc
+*.log
+*.geany
