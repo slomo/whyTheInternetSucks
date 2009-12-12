@@ -4,18 +4,15 @@ Outline
 =======
 
 1. Einleitung / Hintergrund
-    a) Das Internet // Bis her wenige Quellen die hier helfen
+	Das Internet // Bis her wenige Quellen die hier helfen
                     // da hier weniger spezielle Gebiete gefragt sind.
-        - Aufbau
-        - Internet-Routing
-        - Internet-Core
-        - Leaf-Netzwerke
+        - Aufbau (Internet-Core,Leaf-Netzwerke,Routing)
         - PI/ redudant links
-    b) Das Problem
+2. Das Problem
         - Beschreibung [1][6]
         - Versuch der Quantfzierung [5][6]
             // gute belgbare Quellen müssen noch gefunden werden
-2. Techniken 
+3. Techniken 
     a) Elemintion [1] // kurz gehalten 
         - Grundlegende Idee 
         - Benefits
@@ -37,13 +34,13 @@ Outline
                 * Defragmentation/MTU [3]
         ii) Address rewriting
             - six/one Routing [4]
-3. Berurteilung
+4. Berurteilung
     a) Persönliche Meinung
         - in Bildung in Begriffen
     b) Konsens (= IETF) 
         // noch keine Quellen, fraglich ob es die gibt
         // ebenfalls fraglich, ob es *eine* Meinung gibt
-4. Quellen
+5. Quellen
 
 [1] Startpaper: Towards a new internet routing archictecture 
 [2] Laurent & Mathy Luigi Iannone - A Scalable Routing System Design for Future Internet - ACM - New York - 2008
