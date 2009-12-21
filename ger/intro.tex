@@ -1,50 +1,10 @@
 %Einleitungskapitel
 \section{Einleitung}
-\paragraph{Die Struktur des Internets}
-Vor Beginn meines Studiums stellt ich mir das Internet als eine Menge 
-von routern vor, welche eher un struktiriert untereineander verbunden 
-sind. Es war offensichtlich das der einzelnden Computer nicht die 
-genaue Struktur des Internets kannte, jedoch schien der Router an 
-welchen ich meine Daten (bzw. Pakete) weiterleitet genau zu wissen, wo 
-hi 
-%% weritermachen 
-\paragraph{Bauteile des Internet}
-\subparagraph{Autonomous Systems}
-Das Internet 
+
+\paragraph{Internet}
+Das Internet verbindet kleinere Netze zu einem Größeren ganzen, um den Datentransfer zwischen ihnen zu ermöglichen. Die Bestandteile der Gesamtstruktur stehen jeweils unter der Verwaltung einer einzelenden Institution, man bezeichnet sie als Autonomes System (AS). Autonome Systeme können unterteilet werden in solche die Daten von anderen AS annehmen und weiterleiten, sie werden auch als ISP bezeichnet, und solche die nur ihre eigenen Daten empfangen oder senden. Alles ASs können wohl unterschiden werden anhand ihrer AS-Nummer, welche ihnen von der RIPE zugeordnet wird.
+
+\paragraph{Routing}
+Mit Routing wird eine Menge von Vorgängen bezeichnet die benötigt werden um in einem Netzwerk ein Paket von einem Router zum nächsten weiterzuleiten, bis es letztendlich sein Ziel erreicht \cite{Mahorta:2002:IR}. Auf dem Weg den das Paket durch ein Netzwerk nimmt muss an jedem Router entschieden werden, zu welchem seiner direkten Nachbarn (nächster Knoten auf Layer 3) er ein erhaltenes Paket weiterleitet, dazu benutzt er einen Routing-Algorithmus \cite{Tanenbaum:2003:CN}. Routing-Algorithmen werden unterschieden in IGP (Interior Gateway Protokolle) und EGP (Exterior Gateway Protokolle). Erstere werden verwendet um Packte innerhalb eines Autonomen Systems zu weiterzuleiten, wohin gegen letztere für das Routing über die AS Grenzen hinaus benutzt werden.
 
 
-Before starting my studies I tough of the Internet as a large crowd of 
-Routers, connect with each other without any specific structure, it was 
-obvious that not ever single computer in the net could have a plan or 
-some kind of map for the whole Internet, but the routers seemed to have 
-all the same understanding of the net. A transmission was done by 
-sending the data, also referred by the term package, to your nearest 
-router, described by your default route, who selected which way to take 
-through the entire net. \\
-During my first year I my view to the Internet changed from this 
-cloud perspective to a more hierarchical perspective, as i was introduced 
-in managing a Router at spline. Also this router hat a default route 
-and routes, to other routers he know, which are the default router for 
-their subnet. Thinking of the Internet as such a structured tree 
-implies that there exists one rootnode which does not go along with any 
-of terms usually used by people to describe the net, for example 
-fault tolerant or equal. \\
-The truth about the structure of the Internet is that it is as well 
-something in between that tow approaches and also something completely 
-different. 
-\paragraph{Parts of the Internet}
-\subparagraph{Autonomous Systems}
-The Internet is a net build out of nets. Each of these smaller net 
-builds an autonomous system (AS). Each of these is controlled by single 
-operator, often a company, a university or any other kind of 
-organistation. ASs can be identified via an AS-Number, normally written 
-as AS<number>.
-%% add more here 
-\subparagraph{Interior Gateway Protocol}
-If a machine inside such a autonomous system wants to reach an other 
-machine it forwards the packet to a router, assuming that the receiver 
-is not part of the same subnet. If the destination is within the same AS 
-the router uses the IGP (Interior Gateway Protocol) to discover the 
-shortest path to it. IGP is used to direct traffic, which goes from 
-one location in the AS to an other. These location can be systems in 
-the AS, as well as exit or entry points to the AS.

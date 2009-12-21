@@ -1,11 +1,8 @@
 \section{Problemstellung}
-%Beschreibung des Problems
-The number of entries in the Internet core Routing tables goes a long 
-with the number of edge networks with provider independent addresses. 
-For most of the edge networks operators it seems pretty reasonable to 
-use PI addresses, as only by using them multihoming becomes an options for real 
-redundancy and as well changing the provider, for whatever reason, 
-can be done without renumbering the entire Network, which would usually 
-cost an enormous amount of men hours. In Advance there are nor real 
-disadvantages for edge net operators, when choosing to use PI 
-addresses.  
+Die beschränkenend Faktoren für das Wachstum des Internet stellen die Anzahl der Addressen dar, sowie die Größe und Anzahl der Updates der Routing Tabelle in der DFZ. Letzteres impliziert vorallem mit wie viel Aufwand die Corerouter ihre eigentlich Arbeit, das Weiterleiten von Paketen durch führen können \cite{Huston:2003:BGP}. Für das Problem der beschränkten Addressierung konnte in den letzten Jahren eine Lösung in der Form von IPv6 gefunden werden, das Problem des Corerouting ist nicht ungelöst jedoch sind die vorhandennen Lösungen umstritten.
+
+\paragraph{Versuch einer Quantfizierung}
+Im Jahr 2004 wurden seit den Anfangsjahren des Internets ca. 63000 IP-Blöcke bei reggistriert, davon ca. 18000 in den letzten 7 Jahren \cite{journals/ccr/MengXZHLZ04}. Gleichzeitig enthielt die BGP Routing Tablle über 160000 Einträge, was einer Anzahl von 2,54 Einträgen pro regetrietem Addressblock entspricht, im Veergleich dazu waren es 1998 noch 1,33. Dieser hohe Anzahl an Routen ist vermutlich auf Edge AS zurückzuführen, die durch mehrer ISP angebunden sind \cite{jen:2008:start}. Solche AS werden auch als multihomed bezeichnet. Die Anbindung durch mehere ISPs hat den Vorteil, das sowohl Lastverteilung als auch Redundanz für das eigene Netzwerk gewährleistet werden. \\ 
+Neben der hohen Anzahl an Einträgen in den Routingtabellen selbst, bildet die hohe Frequenz von Eintragsänderung ebenfalls ein Problem. Beispielsweise wurden in der ersten Jahreshälfte 2004 24000 Einträge in der BGP-Tabellen entfern, im gleichen Zeitraum wurde jedoch aiuch 36000 Einträge hinzugefügt, die Anzahl der erreichbaren Geräte veränderte sich aber nur geringfügig. Dabei kommt ein hoher Anteil der Änderung von nur wenigen AS, so erreichten vom 14. Dezember bis zum 20. Dezember 2009 insgesamt 465992 BGP updates die BGP Tabellen, wovon 30,33 \% von nur 50 AS getätigt wurden \cite{Huston:aktuell:BGP}. Dies könnte ein Hinweis auf gößere Umzüg zumeist kleiner ASs oder auf fehlkonfigurierte BGP-Router sein. \\
+Es ist fraglich für wieviele der betroffenden Router die überhaupt eine der prpagierten Routen wichtig ist, in dem Sinne das sie auch tatsächlich benutzt wird.
+
