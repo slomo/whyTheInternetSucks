@@ -1,12 +1,11 @@
 %Einleitungskapitel
 \section{Einleitung}
+Durch das starke Wachstum der letzten Jahre nährt sich Internet den technischen Grenzen der aktuell in Verwendung befindlichen Protokolle. Die limitirenden Faktoren sind die Addresslänge und die Komlexität des Routing-Algorithmus. Während mit IPv6 das Problem der Addresslänge weitgehend gelöst wurde, bleibt noch offen wie die Routing-Struktur für die wachsenden Teilnehmerzahlen verändert werden soll. \\
 
-%TODO: Kompletter rewrite
+Während der letzten Jahre wuchs die Größe der Routing-Tabelle in der DFZ (Default-Free-Zone) mehr als linear zur Anzahl der verbundenen Systeme und gefährdet damit die Sklaierbakeit des Routings. \\
 
-\paragraph{Internet}
-Das Internet besteht aus kleineren individuellen selbständigen Einheiten. Diese Einheiten sind mehr oder weniger homogene Netzwerke welche von einer Institution verwaltet werden. Ein solches Netzwerk wird als Autonomes System (AS) bezeichnet. Autonome Systeme werden in verschidene Kategoreien eingeteilet, je nachdem wie sie mit anderen ASs verbunden sind, bzw. wie sie mit deren Netzverkehr üblicherweise verfahren. Edgenetworks (EN), empfangen und senden nur Daten die für sie selbst bestimmt sind, sie werden auch als leafnetworks oder stubnetworks bezeichnet. Netzwerke die durchgehende Verkehr (transittraffic) weiterleiten, sind üblichwerweise ISPs sie verbinden edgenetworks, werden kategorsiert nach räumlicher Ausdehnung (lokal,national oder global) und bilden alle zusammen den sogennaten Internetcore. Verbindungen zwischen zwei AS (vorallem wenn sie der gleichen Kategorie angehören) werden auch als Peeringpoint bezeichnet. Ein AS wird durch eine eindeutige Nummer identifiziert, welches ihm durch die RIPE zugeordnet wird.
+Diese Arbeit soll aufzeigen welche aktuellen Entwicklungen das Internet-Routing gefährden, wo das prinzipiellen Problem liegt und welche möglichen Lösungsansätze innerhalb der zuständigen Grämien diskutierte werden. \\
 
-\paragraph{Routing}
-Mit Routing wird eine Menge von Vorgängen bezeichnet die nötig ist um in einem Netzwerk ein Datenpaket von einem Router zum nächsten weiterzuleiten, bis es letztendlich sein Ziel erreicht \cite{Mahorta:2002:IR}. Auf dem Weg, den das Paket durch ein Netzwerk nimmt, muss an jedem Router entschieden werden, zu welchem seiner direkten Nachbarn (nächster Knoten auf Layer 3) er ein erhaltenes Paket weiterleitet, dazu benutzt er einen Routing-Algorithmus \cite{Tanenbaum:2003:CN}. Routing-Algorithmen werden unterschieden in IGP (Interior Gateway Protokolle) und EGP (Exterior Gateway Protokolle). Erstere werden verwendet um Packte innerhalb eines Autonomen Systems zu weiterzuleiten, wohin gegen letztere für das Routing über die AS Grenzen hinaus benutzt werden. 
+Der Erste Abschnitt soll in das Thema einleiten und die nötigen Begriffe erläutern, um darauf folgend Abschnitt das Problem, sowie dessen Ursachen und Auswirken genauer zu erläutern. Zwei prinzipielle Lösungsmöglichkeiten werden im 3 Abschnitt aufgzeigt, wobei eine genauerer diskutiert wird. Im letzten Abschnitt werden die Lösungen zusammengefasst und soweit möglich bewertet.
 
-
+ 
