@@ -1,12 +1,11 @@
 %Einleitungskapitel
 \section{Einleitung}
-%TODO: kann hier mehr
-Durch das starke Wachstum der letzten Jahre erreicht das Internet die technischen Grenzen der aktuell verwendeten Protokolle. Die limitirenden Faktoren sind die Addresslänge und die Komlexität des Routing-Algorithmus. Während mit IPv6 das Problem der Addresslänge weitgehend gelöst wurde, bleibt noch offen wie die Routing-Struktur für die wachsenden Teilnehmerzahlen verändert werden soll. \\
+Durch das starke Wachstum der letzten Jahre erreicht das Internet die technischen Grenzen der Netzwerkebene. Probleme zeigen sich unter anderem bei der Adressanzahl, der Mobilität von Endgeräten,  der Sicherheit des Gesamtsystems und den Routing-Protokollen. Durch IPv6 wurde für die Anzahl der Adressen und Teilaspekte der Mobilität eine Lösung gefunden, und auch Sicherheit als begleitende Prozess jeder Entwicklung gewann in den letzten Jahren mehr Aufmerksamkeit. Der Handlungsbedarf beim Internet-Routing wurde schon vor geraumer Zeit erkannt, zur Zeit wurde jedoch noch keine Lösung in die Praxis umgesetzt.\\
+ 
+Während der letzten Jahre wuchs die Größe der Routing-Tabelle in der Default-Free-Zone (DFZ) mehr als linear zur Anzahl der verbundenen Systeme, und gefährdet damit die Skalierbarkeit der existierenden Routing-Mechanismen \cite{huston:2001:analyzing}\cite{Huston:aktuell:BGP}. Neben der steigenden Anzahl der Einträge stellt auch die hohe Frequenz an Updates in der Routing-Tabelle ein Problem dar. Alle bisherigen Lösungsvorschläge fallen in zwei grundsätzliche Kategorien: Separation oder Elimination \cite{jen:2008:start}. \\
 
-Während der letzten Jahre wuchs die Größe der Routing-Tabelle in der DFZ (Default-Free-Zone) mehr als linear zur Anzahl der verbundenen Systeme und gefährdet damit die Sklaierbakeit des Routings \cite{Huston:2003:BGP}. \\
+Diese Arbeit soll aufzeigen welche aktuellen Entwicklungen das Internet-Routing gefährden und deren Ursachen untersuchen. Es werden Lösungsansätze vorgestellt, die zur Zeit innerhalb von Forschung und Standardisierung diskutiert werden. \\
 
-Diese Arbeit soll aufzeigen welche aktuellen Entwicklungen das Internet-Routing gefährden, wo das prinzipielle Problem liegt und welche möglichen Lösungsansätze innerhalb der zuständigen Grämien diskutierte werden. \\
-
-Der erste Abschnitt soll in das Thema einleiten und die nötigen Begriffe erläutern, um im darauf folgenden Teil das Problem, sowie dessen Ursachen und Auswirken genauer zu erläutern. Zwei prinzipielle Lösungsmöglichkeiten werden im 3 Abschnitt aufgzeigt, wobei der Seperationsansatz genauer diskutiert wird. Im letzten Abschnitt werden zuvor gewonnen Erkentnisse und bewertet.
+Der erste Abschnitt soll in das Thema einleiten und die nötigen Begriffe erläutern, um anschließend Probleme sowie deren Ursachen und Auswirkungen genauer zu untersuchen. Zwei prinzipielle Lösungsmöglichkeiten werden im dritten Abschnitt aufgezeigt, wobei Ansätze zur Separation ausführlich diskutiert werden. Im letzten Abschnitt werden zuvor gewonnen Erkenntnisse zusammengefasst und bewertet.
 
  
