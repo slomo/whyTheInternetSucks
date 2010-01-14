@@ -1,7 +1,8 @@
 @Book{Mahorta:2002:IR,
   author 	= {R. Malhorta},
   title 	= {IP Routing},
-  publisher 	= {O'Reilly Media, Sebastopol, CA, USA},
+  publisher = {O'Reilly Media},
+  address   = {Sebastopol, CA, USA },
   edition 	= {1st},
   pages 	= {219},
   year 		= {2002},
@@ -10,23 +11,26 @@
 @Book{Tanenbaum:2003:CN,
   author =	{Andrew S. Tanenbaum},
   title  =	{Computer networks},
-  publisher = 	{Prentice Hall, Upper Saddle River, NJ, USA},
+  publisher = 	{Prentice Hall},
   edition = 	{4th},
+  address = {Upper Saddle river, NJ, USA },
   pages = 	{348},
   year = 	{2003},
 }
 
 @Article{journals/ccr/MengXZHLZ04,
-  title =	{{IP}v4 address allocation and the {BGP} routing table
-		 evolution},
-  author =	{Xiaoqiao Meng and Zhiguo Xu and Beichuan Zhang and
-		 Geoff Huston and Songwu Lu and Lixia Zhang},
-  journal =	{Computer Communication Review},
-  year = 	{2004},
-  number =	{1},
-  volume =	{35},
-  pages =	{71--80},
-  URL =  	{http://doi.acm.org/10.1145/1052812.1052827},
+  author = {Meng, Xiaoqiao and Xu, Zhiguo and Zhang, Beichuan 
+      and Huston, Geoff and Lu, Songwu and Zhang, Lixia},
+  title = {IPv4 address allocation and the BGP routing table evolution},
+  journal = {SIGCOMM Comput. Commun. Rev.},
+  volume = {35},
+  number = {1},
+  year = {2005},
+  issn = {0146-4833},
+  pages = {71--80},
+  doi = {http://doi.acm.org/10.1145/1052812.1052827},
+  publisher = {ACM},
+  address = {New York, NY, USA},
 }
 
 @article{huston:2001:analyzing,
@@ -35,19 +39,19 @@
   journal={The Internet Protocol Journal},
   volume={4},
   number={1},
-  pages={4--1},
   year={2001},
   publisher={Citeseer}
 }
 
-
 @inproceedings{jen:2008:start,
-  title =	{ Towards A New Internet Routing Architecture:Arguments for Separating Edges from Transit Core},
+  title =	{ Towards A New Internet Routing Architecture:Arguments for 
+      Separating Edges from Transit Core},
   author =	{D. Jen et al.},
-  year = 	{2008},
   URL =  	{http://www.cs.memphis.edu/~lanwang/paper/routingarch-hotnets.pdf},
-  booktitle =   {ACM Sigcomm Proceedings}
-
+  booktitle = {SIGCoMM '08: Proceedings of the 2008 ACM SIGCOMM Wororkshop Hotnets},
+  year = {2008},
+  publisher = {ACM},
+  address = {New York, NY, USA},
 }
 
 @MISC{Huston:aktuell:BGP,
@@ -67,101 +71,140 @@
   type = 	{RFC},
   month =	{sep},
   year = 	{2007},
-  txt =  	{http://www.ietf.org/rfc/rfc4862.txt},
+  institution = {IETF},
+  address = {Fremont, CA, USA},
+  txt =  	{http://tools.ietf.org/html/rfc4862},
   obsoletes =	{Obsoletes RFC2462.},
-  online =	{yes},
-  status =	{PROPOSED STANDARD},
+  status =	{DRAFT STANDARD}
 }
 
-@Misc{nordmark:2009:RFC5533,
+@techreport{nordmark:2009:RFC5533,
   author =	{E. Nordmark and M. Bagnulo},
-  title =	{{RFC 5533}: {IPv6}  Shim6: Level 3 Multihoming Shim Protocol for IPv6},
-  howpublished = {Request For Comments~(RFC)~4862},
+  title =	{{RFC 5533}: Shim6: Level 3 Multihoming Shim Protocol for IPv6},
   year = 	{2009},
+  month =   {june},
+  institution = {IETF},
+  address = {Fremont, CA, USA},
   txt =  	{http://tools.ietf.org/html/rfc5533},
-  online =	{yes},
-  status =	{RFC PUBLISHED},
+  status =	{PROPOSED STANDART}
 }
 
-
-@article{thomson31rfc4862,
-  title =	{RFC4862: IPv6 Stateless Address Autoconfiguration},
-  author =	{Thomson, S. and Narten, T. and Jinmei, T.},
-  journal =	{Standards Track, http://www. ietf. org/rfc/rfc4862. txt AUTOCONF-Stating the Problem},
-  volume =	{31},
-  year = 	{2007}
-}
-
-
-@article{hawkinson:1996:autnomousSystems,
-  title =	{Guidelines for creation, selection, and registration of an Autonomous System (AS)},
+@techreport{hawkinson:1996:autnomousSystems,
+  title =	{{RFC 1930}: Guidelines for creation, selection, and registration 
+            of an Autonomous System (AS)},
   author =	{Hawkinson, J. and Bates, T.},
   year =	{1996},
-  publisher =	{RFC 1930, March 1996}
+  month =   {mar},
+  institution = {IETF},
+  address = {Fremont, CA, USA},
+  txt =  	{http://tools.ietf.org/html/rfc1930},
+  status =	{BEST CURRENT PRACTICE}
 }
 
-@article{deering:1996:map,
-  title={{The Map \& Encap Scheme for scalable IPv4 routing with portable site prefixes}},
-  author={Deering, S.},
-  journal={Presentation, Xerox PARC},
-  year={1996}
+@techreport{farinacci:2009:LISP,
+  title=    {{Internet Draft}: Locator/ID Separation Protocol (LISP)},
+  author=   {Farinacci, D. and Fuller, V. and Meyer, D. and Lewis, D.},
+  year=     {2009},
+  month =   {sep},
+  institution = {IETF},
+  address = {Fremont, CA, USA},
+  txt =  	{http://tools.ietf.org/html/draft-ietf-lisp-05},
+  status =	{INTERNET DRAFT}
 }
 
-@misc{farinacci:2009:LISP ,
-  title={{Internet Draft: Locator/ID Separation Protocol (LISP)}},
-  author={Farinacci, D. and Fuller, V. and Oran, D. and Meyer, D.},
-  year={2009},
-  publisher={draft-farinacci-LISP-12}
+@techreport{deering:1996:map,
+  title =   {The Map \& Encap Scheme for scalable IPv4 routing with 
+            portable site prefixes},
+  author=   {Deering, S.},
+  institution= {Xerox PARC},
+  year=     {1996},
+  address = {Palo Alto, CA, USA}
 }
 
-@conference{vogt:2008:six,
-  title={{Six/one router: a scalable and backwards compatible solution for provider-independent addressing}},
-  author={Vogt, C.},
-  booktitle={Proceedings of the 3rd international workshop on Mobility in the evolving internet architecture},
-  pages={13--18},
-  year={2008},
-  organization={ACM}
+
+@inproceedings{vogt:2008:six,
+  author = {Vogt, Christian},
+  title =   {Six/one router: a scalable and backwards compatible 
+            solution for provider-independent addressing},
+  booktitle = {MobiArch '08: Proceedings of the 3rd international 
+            workshop on Mobility in the evolving internet architecture},
+  year = {2008},
+  isbn = {978-1-60558-178-1},
+  pages = {13--18},
+  location = {Seattle, WA, USA},
+  doi = {http://doi.acm.org/10.1145/1403007.1403011},
+  publisher = {ACM},
+  address = {New York, NY, USA},
 }
 
-@conference{mathy:2008:dht,
-  title={{LISP-DHT: Towards a DHT to map identifiers onto locators}},
-  author={Mathy, L. and Iannone, L.},
-  booktitle={Proceedings of the 2008 ACM CoNEXT Conference},
-  year={2008},
-  organization={ACM New York, NY, USA}
+
+
+@inproceedings{mathy:2008:dht,
+  author = {Mathy, Laurent and Iannone, Luigi},
+  title = {LISP-DHT: towards a DHT to map identifiers onto locators},
+  booktitle = {CoNEXT '08: Proceedings of the 2008 ACM CoNEXT Conference},
+  year = {2008},
+  isbn = {978-1-60558-210-8},
+  pages = {1--6},
+  location = {Madrid, Spain},
+  doi = {http://doi.acm.org/10.1145/1544012.1544073},
+  publisher = {ACM},
+  address = {New York, NY, USA},
 }
 
-@conference{iannone:2007:cost,
-  title={{On the cost of caching locator/ID mappings}},
-  author={Iannone, L. and Bonaventure, O.},
-  booktitle={Proceedings of the 2007 ACM CoNEXT conference},
-  year={2007},
-  organization={ACM New York, NY, USA}
+
+@inproceedings{iannone:2007:cost,
+  author = {Iannone, Luigi and Bonaventure, Olivier},
+  title = {On the cost of caching locator/ID mappings},
+  booktitle = {CoNEXT '07: Proceedings of the 2007 ACM CoNEXT conference},
+  year = {2007},
+  isbn = {978-1-59593-770-4},
+  pages = {1--12},
+  location = {New York, New York},
+  doi = {http://doi.acm.org/10.1145/1364654.1364663},
+  publisher = {ACM},
+  address = {New York, NY, USA},
 }
+
 
 @misc{ietf:groups,
   title =	{Group Charter of the Internet Engineering Task Force},
   howpublished ={avaible at: http://www.ietf.org/dyn/wg/charter.html},
   month =	{visited: 9th january},
-  year =	{2010}
+  year =	{2010},
+  author =  {IETF}
 }
 
 @misc{ietf:documents,
   title =	{Document tracker of the Internet Engineering Task Force},
   howpublished ={avaible at: http://datatracker.ietf.org/},
   month =	{visited: 9th january},
-  year =	{2010}
+  year =	{2010},
+  author =  {IETF}
 }
 
 @misc{irtf:rrg,
   title =	{Routing Research Group of the Internet Research Task Force},
   howpublished ={avaible at: http://www.irtf.org/rrg},
   month =	{visited: 9th january},
-  year =	{2010}
+  year =	{2010},
+  author =  {IETF}
 }
+
 
 @misc{ripe:ipv4,
   title =       {IPv4 Address Allocation and Assignment Policies for the RIPE NCC Service Region},
 }
 
 
+@techreport{ripe:ipv4,
+  title =	{{RFC 1519}: Classless Inter-Domain Routing (CIDR):
+            an Address Assignment and Aggregation Strategy},
+  author =	{Fuller, V. and Li, T. and Yu, J. and Varadhan, K.},
+  year =	{1993},
+  month =   {sep},
+  institution = {IETF},
+  address = {Fremont, CA, USA},
+  txt =  	{http://tools.ietf.org/html/rfc1519},
+  status =	{PROPOSED STANDART}
+}
