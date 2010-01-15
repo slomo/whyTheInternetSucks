@@ -1,5 +1,7 @@
 \section{Problemstellung}
 % Routing:
+
+\subsection{Grundlagen}
 \paragraph{}
 Mit Routing wird der Vorgang bezeichnet, der nötig ist, um ein Datenpaket in einem Netzwerk weiterzuleiten \cite{Mahorta:2002:IR}. Auf dem Weg des Paketes von der Quelle zum Ziel muss an jedem Router entschieden werden, zu welchem seiner direkten Nachbarn (nächster Knoten auf der Netzwerkschicht) ein Paket weitergeleitet werden soll. Diese Entscheidung wird anhand der Routing-Tabelle getroffen. Eine Routing-Tabelle enthält Zuordnungen zwischen Präfixen und Nachbarn, über die man den Präfix erreichen kann \cite{Mahorta:2002:IR}. Erhält der Router ein Paket, so geht er die Routing-Tabelle durch und ermittelt die Menge der Präfixe in denen die Zieladresse enthalten ist \cite{Tanenbaum:2003:CN}. Anschließend leitet er das Paket an den Nachbarn weiter, der dem längsten dieser Präfixe zugeordnet ist. Die Einträge in der Routing-Tabelle werden entweder statisch festgelegt oder durch ein Routing-Protokoll ausgetauscht \cite{Mahorta:2002:IR}. Routing-Protokolle werden unterschieden in Interior Gateway Protokolle (IGP) und Exterior Gateway Protokolle (EGP) \cite{Tanenbaum:2003:CN}. Mit EGPs werden Routing-Informationen zwischen autonomen Systemen ausgetauscht, während IGPs innerhalb eines autonomen Systems  verwendet werden.  % TODO: IGPs ?
 
@@ -16,6 +18,7 @@ Eine strikt hierarchische Vergabe von Präfixen führt dazu, dass die Komplexit�
 Es gibt Knoten im Internet, welche die gleiche Sicht auf alle nichthierarchischen Präfixe benötigen. Diese Knoten sind normalerweise die EGP-Router der ISPs. Sie besitzen keine Default-Routen und bilden daher die Default-Free-Zone (DFZ). Alle Knoten der DFZ benötigen eine Route zu jedem in der DFZ bekannten Präfix. Die Router eines Stub-AS können eine Default-Route zum Internet über ihre Provider verwenden und gehören dann nicht zur DFZ. Ihr Präfix wird trotzdem in der gesamten DFZ bekanntgegeben. 
 
 % Kernproblem:
+\subsection{Kernproblem}
 \paragraph{}
 Die Skalierbarkeit des Routings zwischen autonomen Systemen ist vor allem dadurch gefährdet, dass die Edge-Netzwerke in den Routing-Tabellen der DFZ-Router abgebildet werden.
 Ein Edge-Netzwerk kann im Präfix seines Providers aggregiert sein oder eine eigene Route besitzen. Um letzteres zu ermöglichen nutzt das Edge-Netzwerk  providerunabhängige Adressen (PI) oder deaggregierte Adressen seines Providers \cite{jen:2008:start}. Ein providerunabhängiger Präfix wird direkt von der RIR vergeben und liegt nicht innerhalb des Präfix eines Providers. Ist der Präfix eines Edge-Netzwerkes nicht von seinem Provider aggregiert, muss der Pfad zum EN über seinen Provider in allen Routing-Tabellen der DFZ enthalten sein.
@@ -25,6 +28,7 @@ Ein Edge-Netzwerk kann im Präfix seines Providers aggregiert sein oder eine eig
 Providerunabhängige Adressen werden von Edge-Netzwerken vor allem aus zwei Gründen genutzt: Sie erleichtern den Wechsel des Providers und sie bieten eine für das Edge-Netzwerk einfache Möglichkeit Multihoming zu realisieren. Nutzt ein Kunde den Subpräfix seines Providers, so erhält er beim Wechsel des ISPs einen anderen Präfix. \cite{jen:2008:start}. Dies erfordert die Änderung der IP-Adresse an jedem Gerät und ist dadurch eine aufwendige Operation. \\
 Viele Edge-Netzwerke nutzen Multihoming, um ihre Netzwerklast auf mehrere Provider zu verteilen oder im Falle eines Verbindungsausfalls auf einen anderen Provider zurückzugreifen. Um über alle seine angebundenen Provider adresstransparent erreichbar zu sein, muss der Präfix des ENs in der gesamten DFZ sichtbar sein. Kein ISP kann ein multihomed Edge-Netzwerk in seinen eigenen Präfix eingliedern \cite{jen:2008:start}, es sei denn es wird eine Struktur geschaffen, die diese Eingliederung für andere Endgeräte transparent macht.
 
+\subsection{Auswikungen und Faktoren}
 % Auswirkungen des Kernproblems
 \paragraph{}
 Bis zum Jahr 2004 wurden insgesamt ca. 63 000 IP-Adressblöcke registriert, davon ungefähr 18 000 in den letzten 7 Jahren. Im gleichen Zeitraum durchgeführte Messungen am meist verwendeten Exterior Gateway Protokoll BGP zeigten, dass die Routing-Tabellen der DFZ ca. 160 000 Einträge umfassten \cite{journals/ccr/MengXZHLZ04}. Dazu wurden die Routing-Tabellen verschiedener DFZ-Router aus ausgewählten autonomen Systemen zusammengeführt und ausgewertet. Die Anzahl der Einträge pro registriertem IP-Adressblock nahm von 1998 mit 1,33 Einträge auf 2,54 Einträge im Jahr 2004 zu \cite{journals/ccr/MengXZHLZ04}. Diese hohe Menge an Routen je Adressblock deutet darauf hin, dass viele Edge-Netzwerke Multihoming nutzen \cite{huston:2001:analyzing}.
@@ -38,6 +42,6 @@ Mit der Größe der Routing-Tabelle wächst auch die Anzahl der Updates, die nö
 
 % Locator <> Identifier Doppelbedeutung
 \paragraph{} 
-Ein weiteres Problem ist, dass eine Unicast-Adresse in der Praxis eine überladene Bedeutung besitzt. Sie wird als Identifier genutzt, da sie einen Socket während eines Kommunikationsvorganges identifiziert. Gleichzeitig dient sie dem Routing-System als Locator. Ändert sich also der Präfix bezüglich eines Gerätes, erzwingt dies eine Unterbrechung der Socket-Kommunikation. Dies erschwert die Implementierung von Mobile-IP und Multihoming ohne PI.
+Ein weiteres Problem ist, dass eine Unicast-Adresse in der Praxis eine überladene Bedeutung besitzt. Sie wird als Identifier genutzt, da sie einen Socket während eines Kommunikationsvorganges identifiziert. Gleichzeitig dient sie dem Routing-System als Locator. Ändert sich also der Präfix bezüglich eines Gerätes, erzwingt dies eine Unterbrechung der Kommunikation zwischen Sockets. Dies erschwert die Implementierung von Mobile-IP und Multihoming ohne in der Routing-Tabelle der DFZ sichtbar zu sein.
 
 
